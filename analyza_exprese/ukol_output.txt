@@ -1,0 +1,105 @@
+--- Part 1 ---
+Training Accuracy: 0.9583
+
+Top 5 most important genes:
+CFD: 0,7386
+ARL4A: 0,1686
+RENBP: 0,0927
+GYPA: 0,0000
+SAA4|SAA2-SAA4: 0,0000
+Cross-Validation Accuracy: 0.9029
+
+Is this gene really the one causing the cancer? Look up Golub et al., 1999.:
+While CFD has been implicated in general cancer-related immune processes, it is not listed among the critical genes distinguishing AML and ALL in Golub et al., 1999.
+Thus, while CFD may indirectly affect cancer progression, it is unlikely to be a causal gene in leukemia subtype classification in this context.
+
+
+--- Part 2 ---
+
+PCA basis matrix V shape: (72, 5862)
+First 3 PCA components (rows of V):
+[[ 3.95349236e-03  6.25026003e-03  1.28540228e-03 ...  1.80095617e-03
+  -2.23600133e-04  6.27956723e-03]
+ [-5.27082363e-03 -6.11930864e-03 -2.38730661e-03 ...  2.58642361e-03
+  -7.23025882e-04  5.03079331e-04]
+ [ 4.19641174e-04 -1.04330563e-03 -2.87730529e-03 ... -3.63196606e-03
+   5.03920516e-05  2.06438507e-03]]
+
+--- K = 1 ---
+Training Accuracy with 1 components: 1,0000
+Testing Accuracy with 1 components: 0,9545
+
+--- K = 2 ---
+Training Accuracy with 2 components: 1,0000
+Testing Accuracy with 2 components: 0,9545
+
+--- K = 5 ---
+Training Accuracy with 5 components: 1,0000
+Testing Accuracy with 5 components: 0,9545
+
+--- K = 10 ---
+Training Accuracy with 10 components: 1,0000
+Testing Accuracy with 10 components: 0,8636
+
+--- K = 20 ---
+Training Accuracy with 20 components: 1,0000
+Testing Accuracy with 20 components: 0,9091
+
+Best model chosen: K = 1
+Testing Accuracy of Best Model (K=1): 0,9545
+
+
+--- Part 3: Extract Active Genes from Discriminative Components ---
+
+Analyzing component PC1...
+Active genes for PC1 (to submit to GOrilla):
+TAGLN2
+OAZ1
+CSTA
+IFI30
+LGALS1
+CTSG
+HIST2H2AA4|HIST2H2AA3
+FTH1
+TSPO
+MPO
+S100A8
+CYBA
+CST3
+FCER1G
+LGALS3
+CTSD
+NFKBIA
+S100A4
+CFD
+AZU1
+SQSTM1
+EMP3
+IL1B
+SRGN
+PRTN3
+GRN
+ZYX
+GPX1
+IGHG1
+MT2A
+MT2A
+PSAP
+LYZ
+APLP2
+ENO1
+ITGB2
+IL8
+IL8
+VIM
+ELANE
+ELANE
+S100A9
+PABPC1P2|PABPC1|PABPC3
+SOD2
+LYZ
+LYZ
+LYZ
+ITGB2
+IGLL5
+Total active genes: 49
